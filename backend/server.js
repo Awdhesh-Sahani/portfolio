@@ -12,7 +12,10 @@ console.log("EMAIL_USER:", process.env.EMAIL_USER);
 console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded ✅" : "Not Loaded ❌");
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    requireTLS: true,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
@@ -37,11 +40,9 @@ app.post("/send-message", async(req, res) => {
             replyTo: email,
             subject: subject,
             text: `
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}
+         Name: ${name}
+         Email: ${email}
+         Message:${message}
             `
         });
 
@@ -63,6 +64,8 @@ ${message}
     }
 });
 
-app.listen(5000, () => {
-    console.log("Backend running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Backend running on port ${PORT}`);
 });

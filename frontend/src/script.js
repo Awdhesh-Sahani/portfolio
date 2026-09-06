@@ -1,6 +1,4 @@
- /* =========================
-          NAVBAR ACTIVE LINK
-       ========================= */
+ /* NAVBAR ACTIVE LINK */
 
  const sections = document.querySelectorAll("section");
  const navLinks = document.querySelectorAll(".nav-link");
@@ -33,9 +31,7 @@
  });
 
 
- /* =========================
-    NAVBAR CLOSE ON MOBILE
- ========================= */
+ /* NAVBAR CLOSE ON MOBILE */
 
  const navLinksMobile = document.querySelectorAll(".navbar-nav .nav-link");
  const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -60,9 +56,7 @@
  });
 
 
- /* =========================
-    BACK TO TOP
- ========================= */
+ /* BACK TO TOP */
 
  const backToTop = document.getElementById("backToTop");
 
@@ -102,7 +96,7 @@
 
      try {
 
-         const response = await fetch("http://localhost:5000/send-message", {
+         const response = await fetch("https://portfolio-kv1q.onrender.com/send-message", {
              method: "POST",
 
              headers: {
@@ -141,9 +135,7 @@
 
  });
 
- /* =========================
-    CURRENT YEAR
- ========================= */
+ /*  CURRENT YEAR */
 
  document.getElementById("year").textContent =
      new Date().getFullYear();
