@@ -96,7 +96,7 @@
 
      try {
 
-         const response = await fetch("https://portfolio-kv1q.onrender.com/send-message", {
+         const response = await fetch("https://portfolio-back-t8dd.onrender.com/send-message", {
              method: "POST",
 
              headers: {
