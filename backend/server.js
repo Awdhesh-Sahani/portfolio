@@ -28,7 +28,7 @@ app.post("/send-message", async(req, res) => {
 
         const { data, error } = await resend.emails.send({
             from: "Portfolio <onboarding@resend.dev>",
-            to: ["awdheshsahani6392789729@gmail.com"],
+            to: ["sahaniawdhesh01@gmail.com"],
             subject: subject,
             text: `
             Name: ${name}
