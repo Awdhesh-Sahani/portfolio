@@ -121,7 +121,7 @@
 
          } else {
 
-             alert("Message send nahi hua!");
+             alert("Message are not send!");
 
          }
 

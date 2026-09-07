@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL
-========================= */
+/*  Global */
 
 * {
     margin: 0;
@@ -37,9 +35,7 @@ section {
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/*  NAVBAR */
 
 .custom-navbar {
     background: rgba(15, 23, 42, 0.92);
@@ -70,9 +66,7 @@ section {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero-section {
     background: radial-gradient( circle at 80% 50%, rgba(56, 189, 248, 0.12), transparent 35%), #0f172a;
@@ -127,9 +121,7 @@ section {
 }
 
 
-/* =========================
-   SOCIAL ICONS
-========================= */
+/* SOCIAL ICONS */
 
 .social-icons {
     margin-top: 30px;
@@ -156,9 +148,7 @@ section {
 }
 
 
-/* =========================
-   PROFILE
-========================= */
+/* PROFILE */
 
 .profile-container {
     position: relative;
@@ -239,9 +229,7 @@ section {
 }
 
 
-/* =========================
-   SECTION TITLE
-========================= */
+/* SECTION TITLE */
 
 .section-title {
     text-align: center;
@@ -265,9 +253,7 @@ section {
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/*  ABOUT */
 
 .about-card {
     background: #1e293b;
@@ -312,9 +298,7 @@ section {
 }
 
 
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 
 .skill-card {
     background: #0f172a;
@@ -349,9 +333,7 @@ section {
 }
 
 
-/* =========================
-   PROJECTS
-========================= */
+/* PROJECTS */
 
 .project-card {
     background: #1e293b;
@@ -444,9 +426,7 @@ section {
 }
 
 
-/* =========================
-   TIMELINE
-========================= */
+/* TIMELINE */
 
 .timeline {
     max-width: 850px;
@@ -507,9 +487,7 @@ section {
 }
 
 
-/* =========================
-   CERTIFICATE CARDS
-========================= */
+/* CERTIFICATE CARDS */
 
 .certificate-card {
     height: 100%;
@@ -632,9 +610,7 @@ section {
 }
 
 
-/* =========================
-   HIRE SECTION
-========================= */
+/* HIRE SECTION */
 
 .hire-section {
     padding: 100px 0;
@@ -677,9 +653,7 @@ section {
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact-heading {
     font-size: 35px;
@@ -756,9 +730,7 @@ section {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     background: #020617;
@@ -804,9 +776,7 @@ footer hr {
 }
 
 
-/* =========================
-   BACK TO TOP
-========================= */
+/* BACK TO TOP */
 
 #backToTop {
     position: fixed;
@@ -829,9 +799,7 @@ footer hr {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 991px) {
     .navbar-nav {
