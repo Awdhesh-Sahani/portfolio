@@ -1,9 +1,5 @@
-const { Resend } = require("resend");
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 module.exports = async(req, res) => {
-    // Only POST request allowed
+    // GET request test
     if (req.method !== "POST") {
         return res.status(405).json({
             success: false,
@@ -14,7 +10,6 @@ module.exports = async(req, res) => {
     try {
         const { name, email, subject, message } = req.body || {};
 
-        // Validate fields
         if (!name || !email || !subject || !message) {
             return res.status(400).json({
                 success: false,
@@ -22,13 +17,17 @@ module.exports = async(req, res) => {
             });
         }
 
-        // Send email using Resend
+        // Resend ko sirf POST request par load karo
+        const { Resend } = await
+        import ("resend");
+
+        const resend = new Resend(process.env.RESEND_API_KEY);
+
         const { data, error } = await resend.emails.send({
             from: "Portfolio <onboarding@resend.dev>",
             to: ["awdheshsahani6392789729@gmail.com"],
             replyTo: email,
             subject: subject,
-
             text: `
 New message from your portfolio
 
