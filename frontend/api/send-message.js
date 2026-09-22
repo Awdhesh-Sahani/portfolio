@@ -1,5 +1,8 @@
-module.exports = async(req, res) => {
-    // GET request test
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export default async function handler(req, res) {
     if (req.method !== "POST") {
         return res.status(405).json({
             success: false,
@@ -16,12 +19,6 @@ module.exports = async(req, res) => {
                 message: "All fields are required"
             });
         }
-
-        // Resend ko sirf POST request par load karo
-        const { Resend } = await
-        import ("resend");
-
-        const resend = new Resend(process.env.RESEND_API_KEY);
 
         const { data, error } = await resend.emails.send({
             from: "Portfolio <onboarding@resend.dev>",
@@ -66,4 +63,4 @@ ${message}
             message: error.message || "Something went wrong"
         });
     }
-};
+}
