@@ -14,7 +14,8 @@ export default async function handler(req, res) {
         return res.status(405).json({ success: false, message: "Method not allowed." });
     }
 
-    if (!process.env.RESEND_API_KEY || !process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!process.env.RESEND_API_KEY || !process.env.SUPABASE_URL || !supabaseSecretKey) {
         console.error("Contact form configuration is incomplete.");
         return res.status(503).json({ success: false, message: "The message service is not configured. Please try again later." });
     }
@@ -37,17 +38,20 @@ export default async function handler(req, res) {
     }
 
     const supabaseUrl = process.env.SUPABASE_URL.replace(/\/$/, "");
-    const adminKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const adminKey = supabaseSecretKey;
+    const supabaseHeaders = {
+        apikey: adminKey,
+        "Content-Type": "application/json",
+        Prefer: "return=minimal"
+    };
+    if (adminKey.startsWith("eyJ")) {
+        supabaseHeaders.Authorization = `Bearer ${adminKey}`;
+    }
 
     try {
         const stored = await fetch(`${supabaseUrl}/rest/v1/contact_messages`, {
             method: "POST",
-            headers: {
-                apikey: adminKey,
-                Authorization: `Bearer ${adminKey}`,
-                "Content-Type": "application/json",
-                Prefer: "return=minimal"
-            },
+            headers: supabaseHeaders,
             body: JSON.stringify({ name, email, subject, message })
         });
 

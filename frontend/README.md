@@ -16,7 +16,7 @@ Static portfolio frontend, private content dashboard, Supabase database/storage,
 
 5. Start the frontend with `npm run dev`. The admin page is at `/dashboard.html`. To test the email API locally, install the Vercel CLI and run `vercel dev` with the server-only environment variables configured; Vite's dev server alone does not run the `/api` function.
 
-The frontend uses the Supabase anonymous key only. Database row-level security restricts writes, uploads, inbox access and deletes to the admin UUID in `portfolio_admins`. The `SUPABASE_SERVICE_ROLE_KEY` must remain server-side.
+The frontend uses the Supabase publishable (or legacy anon) key only. Database row-level security restricts writes, uploads, inbox access and deletes to the admin UUID in `portfolio_admins`. The `SUPABASE_SECRET_KEY` (or legacy `SUPABASE_SERVICE_ROLE_KEY`) must remain server-side.
 
 ## Deploying
 
@@ -27,7 +27,7 @@ Deploy the project to Vercel. Configure these environment variables in the Verce
 | `VITE_SUPABASE_URL` | Supabase project URL, exposed to the frontend |
 | `VITE_SUPABASE_ANON_KEY` | Supabase anonymous key, exposed to the frontend |
 | `SUPABASE_URL` | Supabase project URL for the contact API |
-| `SUPABASE_SERVICE_ROLE_KEY` | Server-only key for storing contact messages |
+| `SUPABASE_SECRET_KEY` | Server-only Supabase secret key for storing contact messages; legacy `SUPABASE_SERVICE_ROLE_KEY` is also supported |
 | `RESEND_API_KEY` | Server-only Resend API key |
 
 Redeploy after changing environment variables. Contact form submissions are stored in `public.contact_messages` and emailed to `awdheshsahani6392789729@gmail.com` using the existing Resend integration. The sender address remains `onboarding@resend.dev`; configure a verified Resend sender if your Resend account requires one.
