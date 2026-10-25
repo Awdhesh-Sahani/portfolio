@@ -89,15 +89,15 @@
                         HELLO, I'M
                     </p>
 
-                    <h1>
+                    <h1 id="homeName">
                         Awdhesh <span>Sahani</span>
                     </h1>
 
-                    <h2>
+                    <h2 id="heroRole">
                         Software Developer & Web Developer
                     </h2>
 
-                    <p class="hero-description">
+                    <p class="hero-description" id="heroDescription">
                         A passionate fresher who loves building modern, responsive and user-friendly web applications. I
                         enjoy solving problems and learning new technologies.
                     </p>
@@ -108,7 +108,7 @@
                             <i class="bi bi-code-slash"></i> View My Work
                         </a>
 
-                        <a href="/assets/resume.pdf" class="btn btn-outline-light custom-btn" download>
+                        <a id="resumeLink" href="/assets/resume.pdf" class="btn btn-outline-light custom-btn" download>
                             <i class="bi bi-download"></i> Download Resume
                         </a>
 
@@ -116,23 +116,23 @@
 
                     <div class="social-icons">
 
-                        <a href="https://github.com/Awdhesh-Sahani" target="_blank">
+                        <a data-social="github" href="https://github.com/Awdhesh-Sahani" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-github"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/awdheshsahani01/" target="_blank">
+                        <a data-social="linkedin" href="https://www.linkedin.com/in/awdheshsahani01/" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-linkedin"></i>
                         </a>
 
-                        <a href="mailto:your-email@gmail.com">
+                        <a data-social="email" href="mailto:sahaniawdhesh01@gmail.com">
                             <i class="bi bi-envelope-fill"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/sa_coder.015?igsi=MTc0aWRtOHR5bTl0Mg==">
+                        <a data-social="instagram" href="https://www.instagram.com/sa_coder.015?igsi=MTc0aWRtOHR5bTl0Mg==" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-instagram"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/share/1T2k883cFr/">
+                        <a data-social="facebook" href="https://www.facebook.com/share/1T2k883cFr/" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-facebook"></i>
                         </a>
 
@@ -147,20 +147,20 @@
 
                         <div class="profile-circle">
 
-                            <img src="/assets/profile.jpg" alt="Awdhesh Sahani" class="profile-image">
+                            <img id="profileImage" src="/assets/profile.jpg" alt="Awdhesh Sahani" class="profile-image">
 
                         </div>
 
                         <div class="floating-card card-one">
-                            <i class="bi bi-code-square"></i> HTML / CSS
+                            <i class="bi bi-code-square"></i> <span id="heroSkillOne">HTML / CSS</span>
                         </div>
 
                         <div class="floating-card card-two">
-                            <i class="bi bi-filetype-js"></i> JavaScript
+                            <i class="bi bi-filetype-js"></i> <span id="heroSkillTwo">JavaScript</span>
                         </div>
 
                         <div class="floating-card card-three">
-                            <i class="bi bi-bootstrap"></i> Bootstrap
+                            <i class="bi bi-bootstrap"></i> <span id="heroSkillThree">Bootstrap</span>
                         </div>
 
                     </div>
@@ -195,9 +195,9 @@
                             <i class="bi bi-person-workspace"></i>
                         </div>
 
-                        <h3>Software Developer</h3>
+                        <h3 id="aboutRole">Software Developer</h3>
 
-                        <p>
+                        <p id="aboutSummary">
                             Fresher passionate about software development, web technologies and creating real-world
                             projects.
                         </p>
@@ -209,16 +209,16 @@
 
                 <div class="col-lg-7">
 
-                    <h3 class="about-heading">
+                    <h3 class="about-heading" id="aboutHeading">
                         Building Ideas Into <span>Web Experiences</span>
                     </h3>
 
-                    <p>
+                    <p id="aboutParagraphOne">
                         I'm a software and web development enthusiast with a strong interest in creating responsive and
                         user-friendly applications.
                     </p>
 
-                    <p>
+                    <p id="aboutParagraphTwo">
                         I have worked with technologies such as Java, JavaScript, React, Node.js, Express and MongoDB. I
                         continuously improve my skills by building practical projects.
                     </p>
@@ -227,25 +227,25 @@
 
                         <div class="col-md-6">
                             <p>
-                                <strong>Name:</strong><br> Awdhesh Sahani
+                                <strong>Name:</strong><br> <span id="aboutName">Awdhesh Sahani</span>
                             </p>
                         </div>
 
                         <div class="col-md-6">
                             <p>
-                                <strong>Role:</strong><br> Software / Web Developer
+                                <strong>Role:</strong><br> <span id="aboutRoleDetail">Software / Web Developer</span>
                             </p>
                         </div>
 
                         <div class="col-md-6">
                             <p>
-                                <strong>Experience:</strong><br> Fresher
+                                <strong>Experience:</strong><br> <span id="aboutExperience">Fresher</span>
                             </p>
                         </div>
 
                         <div class="col-md-6">
                             <p>
-                                <strong>Location:</strong><br> India
+                                <strong>Location:</strong><br> <span id="aboutLocation">India</span>
                             </p>
                         </div>
 
@@ -272,7 +272,7 @@
             </div>
 
 
-            <div class="row g-4">
+            <div class="row g-4" id="skillsList">
 
                 <!-- HTML -->
                 <div class="col-md-6 col-lg-4">
@@ -472,7 +472,7 @@
             </div>
 
 
-            <div class="row g-4">
+            <div class="row g-4" id="projectsList">
 
 
                 <!-- Project 1 -->
@@ -699,7 +699,7 @@
             </div>
 
 
-            <div class="timeline">
+            <div class="timeline" id="educationTimeline">
 
                 <div class="timeline-item">
 
@@ -780,7 +780,7 @@
                 <h2>My <span>Certificates</span></h2>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-4" id="certificateList">
 
                 <!-- Certificate Card 1 -->
                 <div class="col-lg-4 col-md-6">
@@ -931,12 +931,12 @@
 
             <h2>Why <span>Hire Me?</span></h2>
 
-            <p>
+            <p id="hireDescription">
                 I am a motivated fresher who is passionate about technology, eager to learn, and ready to contribute to
                 real-world projects.
             </p>
 
-            <div class="row justify-content-center mt-5">
+            <div class="row justify-content-center mt-5" id="hireHighlights">
 
                 <div class="col-md-3">
                     <div class="hire-box">
@@ -1010,7 +1010,7 @@
 
                             <div>
                                 <h6>Email</h6>
-                                <p>sahaniawdhesh01@gmail.com</p>
+                                <p><a id="contactEmail" href="mailto:sahaniawdhesh01@gmail.com">sahaniawdhesh01@gmail.com</a></p>
                             </div>
 
                         </div>
@@ -1022,7 +1022,7 @@
 
                             <div>
                                 <h6>Phone</h6>
-                                <p>+91 6392789729</p>
+                                <p id="contactPhone">+91 6392789729</p>
                             </div>
 
                         </div>
@@ -1034,7 +1034,7 @@
 
                             <div>
                                 <h6>Location</h6>
-                                <p>India</p>
+                                <p id="contactLocation">India</p>
                             </div>
 
                         </div>
@@ -1044,23 +1044,23 @@
 
                     <div class="social-icons contact-social">
 
-                        <a href="https://github.com/Awdhesh-Sahani" target="_blank">
+                        <a data-social="github" href="https://github.com/Awdhesh-Sahani" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-github"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/awdheshsahani01/" target="_blank">
+                        <a data-social="linkedin" href="https://www.linkedin.com/in/awdheshsahani01/" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-linkedin"></i>
                         </a>
 
-                        <a href="sahaniawdhesh01@gmail.com">
+                        <a data-social="email" href="mailto:sahaniawdhesh01@gmail.com">
                             <i class="bi bi-envelope-fill"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/sa_coder.015?igsi=MTc0aWRtOHR5bTl0Mg==">
+                        <a data-social="instagram" href="https://www.instagram.com/sa_coder.015?igsi=MTc0aWRtOHR5bTl0Mg==" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-instagram"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/share/1T2k883cFr/">
+                        <a data-social="facebook" href="https://www.facebook.com/share/1T2k883cFr/" target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-facebook"></i>
                         </a>
 
@@ -1120,6 +1120,7 @@
                             Send Message
                             <i class="bi bi-send"></i>
                         </button>
+                        <p id="contactFormStatus" class="mt-3 mb-0" role="status" aria-live="polite"></p>
 
                     </form>
 
@@ -1142,29 +1143,29 @@
                 &lt; Awdhesh /&gt;
             </a>
 
-            <p>
+            <p id="footerRole">
                 Software Developer | Web Developer | Fresher
             </p>
 
             <div class="footer-social">
 
-                <a href="https://github.com/Awdhesh-Sahani" target="_blank">
+                <a data-social="github" href="https://github.com/Awdhesh-Sahani" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-github"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/in/awdheshsahani01/" target="_blank">
+                <a data-social="linkedin" href="https://www.linkedin.com/in/awdheshsahani01/" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-linkedin"></i>
                 </a>
 
-                <a href="sahaniawdhesh01@gmail.com">
+                <a data-social="email" href="mailto:sahaniawdhesh01@gmail.com">
                     <i class="bi bi-envelope"></i>
                 </a>
 
-                <a href="https://www.instagram.com/sa_coder.015?igsi=MTc0aWRtOHR5bTl0Mg==">
+                <a data-social="instagram" href="https://www.instagram.com/sa_coder.015?igsi=MTc0aWRtOHR5bTl0Mg==" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-instagram"></i>
                 </a>
 
-                <a href="https://www.facebook.com/share/1T2k883cFr/">
+                <a data-social="facebook" href="https://www.facebook.com/share/1T2k883cFr/" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-facebook"></i>
                 </a>
 

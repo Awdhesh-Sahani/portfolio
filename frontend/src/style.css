@@ -357,6 +357,12 @@ section {
     font-size: 70px;
 }
 
+.project-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project-one {
     background: linear-gradient( 135deg, #164e63, #0f172a);
 }
@@ -512,6 +518,15 @@ section {
     height: 210px;
     overflow: hidden;
     background: #0f172a;
+}
+
+.certificate-placeholder {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    color: #38bdf8;
+    font-size: 52px;
 }
 
 .certificate-image img {

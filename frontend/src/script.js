@@ -84,10 +84,15 @@
  /* CONTACT FORM */
 
  const contactForm = document.getElementById("contactForm");
+ const contactFormStatus = document.getElementById("contactFormStatus");
 
  contactForm.addEventListener("submit", async(event) => {
 
      event.preventDefault();
+     contactFormStatus.textContent = "Sending your message...";
+     contactFormStatus.classList.remove("text-danger", "text-success");
+     const submitButton = contactForm.querySelector("button[type='submit']");
+     submitButton.disabled = true;
 
      const name = document.getElementById("name").value.trim();
      const email = document.getElementById("email").value.trim();
@@ -112,26 +117,22 @@
              })
          });
 
-         const data = await response.json();
+         const data = await response.json().catch(() => ({}));
 
-         if (data.success) {
-
-             alert("Message sent successfully!");
-
+         if (response.ok && data.success) {
+             contactFormStatus.textContent = "Message sent successfully. Thank you for getting in touch!";
+             contactFormStatus.classList.add("text-success");
              contactForm.reset();
-
          } else {
-
-             alert("Message are not send!");
-
+             throw new Error(data.message || "Your message could not be sent. Please try again later.");
          }
 
      } catch (error) {
-
          console.error(error);
-
-         alert("Backend server running nahi hai!");
-
+         contactFormStatus.textContent = error.message || "The message service is unavailable. Please try again later.";
+         contactFormStatus.classList.add("text-danger");
+     } finally {
+         submitButton.disabled = false;
      }
 
  });
@@ -140,3 +141,5 @@
 
  document.getElementById("year").textContent =
      new Date().getFullYear();
+
+ import("./portfolio.js");
