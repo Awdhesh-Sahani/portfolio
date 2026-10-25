@@ -282,7 +282,7 @@ function showLogin(message = "") {
 }
 
 document.addEventListener("click", async event => {
-    const sectionButton = event.target.closest("[data-section]");
+    const sectionButton = event.target.closest("button[data-section]");
     if (sectionButton) {
         activeSection = sectionButton.dataset.section;
         renderPage();
